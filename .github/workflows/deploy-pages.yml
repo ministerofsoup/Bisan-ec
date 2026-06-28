@@ -1,0 +1,43 @@
+name: Deploy mockups to GitHub Pages
+
+# design/mockups/ の静的HTML（検討用モック）を GitHub Pages に公開する。
+# Pages の Source を "GitHub Actions" に設定しておくこと（Settings → Pages）。
+
+on:
+  push:
+    branches:
+      - claude/first-commit-push-h9hj3j
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時実行は1つに絞る（後勝ち）
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload mockups as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 公開するディレクトリ（モックのサイトルート）
+          path: design/mockups
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
