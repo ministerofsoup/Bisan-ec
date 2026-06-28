@@ -31,6 +31,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Pages が未設定なら自動で有効化を試みる（Source: GitHub Actions）
+          enablement: true
 
       - name: Upload mockups as Pages artifact
         uses: actions/upload-pages-artifact@v3
