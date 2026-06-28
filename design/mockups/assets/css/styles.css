@@ -118,15 +118,30 @@ img { max-width: 100%; display: block; }
   color: var(--color-primary);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero ----------
+   背景画像の差し替え方法:
+   assets/img/hero.jpg を置くと自動で背景に表示されます。
+   レイヤーは上から「緑スクリム → 下部の暗幕 → 背景写真 → フォールバックの
+   グラデーション」の順。画像未配置の間はフォールバックが表示されます。
+   別ファイル名にする場合は下の --hero-image を変更してください。 */
 .hero {
+  --hero-image: url("../img/hero.jpg");
   position: relative;
   color: #fff;
   text-align: center;
-  padding: 120px 24px;
-  background:
-    linear-gradient(rgba(20,61,34,0.55), rgba(20,61,34,0.75)),
+  padding: 140px 24px;
+  background-image:
+    /* 1) 全体にかける深緑のスクリム（文字を読みやすく） */
+    linear-gradient(rgba(20,61,34,0.55), rgba(20,61,34,0.72)),
+    /* 2) 下部を少し暗くして文字の足元を締める */
+    linear-gradient(to bottom, rgba(20,61,34,0) 45%, rgba(20,61,34,0.55) 100%),
+    /* 3) 風景の背景写真 */
+    var(--hero-image),
+    /* 4) 画像が無いときのフォールバック */
     radial-gradient(circle at 30% 30%, #e9a94e 0%, #c9772a 45%, #1E5631 100%);
+  background-size: cover, cover, cover, cover;
+  background-position: center, center, center, center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 .hero .eyebrow {
@@ -134,13 +149,20 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.35em;
   text-transform: uppercase;
   opacity: 0.9;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   margin: 0.3em 0;
   color: #fff;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.4);
 }
-.hero p { max-width: 560px; margin: 0 auto 2em; font-size: 1.05rem; }
+.hero p {
+  max-width: 560px;
+  margin: 0 auto 2em;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+}
 
 /* 幾何学パターンのさりげない装飾 */
 .pattern-strip {

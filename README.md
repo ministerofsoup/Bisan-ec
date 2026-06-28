@@ -31,7 +31,8 @@ Bisan-ec/
 │   ├── 01-brand-research.md   # Bisanの世界観調査
 │   ├── 02-tone-and-manner.md  # トーン&マナー定義
 │   ├── 03-platform-comparison.md  # プラットフォーム比較
-│   └── 04-product-kunafa.md   # 商品（クナーファ）情報・要件
+│   ├── 04-product-kunafa.md   # 商品（クナーファ）情報・要件
+│   └── 05-keyvisual-prompts.md # キービジュアル生成プロンプト集（Gemini向け）
 └── design/                    # デザイン検討用の成果物
     ├── README.md
     └── mockups/               # 静的HTMLモックアップ（検討用）
