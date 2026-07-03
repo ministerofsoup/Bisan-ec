@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bisan — パレスチナの食卓を、ご自宅へ</title>
-  <meta name="description" content="東京・十条発のパレスチナ料理店 Bisan。伝統菓子クナーファの冷凍お取り寄せ。" />
+  <meta name="description" content="東京・十条発のパレスチナ料理店 Bisan。伝統菓子クナーファとバクラバのセットを冷凍お取り寄せ。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
@@ -19,8 +19,7 @@
       <a class="brand" href="index.html">Bisan<small>Palestinian Kitchen</small></a>
       <nav class="nav">
         <a href="#story">Bisanについて</a>
-        <a href="#products">商品</a>
-        <a href="product-kunafa.html">クナーファ</a>
+        <a href="#product">商品</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -31,7 +30,7 @@
     <p class="eyebrow">From Palestine, with warmth</p>
     <h1>パレスチナの食卓を、ご自宅へ。</h1>
     <p>東京・十条のパレスチナ料理店 Bisan。<br />本場の味と物語を、冷凍便でお届けします。</p>
-    <a class="btn btn-gold" href="product-kunafa.html">クナーファを見る</a>
+    <a class="btn btn-gold" href="#product">商品を見る</a>
   </section>
   <div class="pattern-strip"></div>
 
@@ -47,40 +46,30 @@
              本国から取り寄せた食材とスパイスで、家庭の味そのままのパレスチナ料理をお出ししています。</p>
           <p>その食卓の温かさと物語を、お取り寄せという形でもお届けしたい。
              この想いから、Bisan のオンラインストアは生まれました。</p>
-          <a class="btn btn-outline" href="#products">商品を見る</a>
+          <a class="btn btn-outline" href="#product">商品を見る</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" style="background:var(--color-surface);border-block:1px solid var(--color-line);">
+  <!-- Product (単一商品) -->
+  <section id="product" style="background:var(--color-surface);border-block:1px solid var(--color-line);">
     <div class="container">
       <h2 class="section-title">お取り寄せ商品</h2>
-      <p class="section-lead">まずはパレスチナの伝統菓子「クナーファ」から。順次ラインナップを増やしていきます。</p>
-      <div class="cards">
-        <a class="card" href="product-kunafa.html" style="text-decoration:none;color:inherit;">
-          <div class="thumb" style="background:url('assets/img/1243クナーファ.png') center/cover no-repeat;"></div>
-          <div class="body">
-            <span class="badge">NEW</span>
-            <h3>冷凍クナーファ</h3>
-            <p style="color:var(--color-muted);font-size:.9rem;">黄金色に焼き上げた生地と、とろけるチーズ。パレスチナを代表する伝統菓子。</p>
-            <p class="price">¥—,— <span style="font-weight:400;font-size:.8rem;color:var(--color-muted);">（税込・送料別）</span></p>
-          </div>
-        </a>
-        <div class="card" style="opacity:.6;">
-          <div class="thumb" aria-hidden="true" style="background:linear-gradient(135deg,#9bbf78,#7BA05B);"></div>
-          <div class="body">
-            <h3>Coming soon</h3>
-            <p style="color:var(--color-muted);font-size:.9rem;">パレスチナのスパイス・食材を準備中です。</p>
-          </div>
+      <p class="section-lead">パレスチナの伝統菓子「クナーファ」と「バクラバ」のセットをお届けします。</p>
+
+      <div class="product-hero">
+        <div class="product-hero-gallery">
+          <img src="assets/img/prod01.png" alt="パレスチナスイーツセット - テーブルセッティング" class="product-hero-img" />
         </div>
-        <div class="card" style="opacity:.6;">
-          <div class="thumb" aria-hidden="true" style="background:linear-gradient(135deg,#c96b5e,#B23A2E);"></div>
-          <div class="body">
-            <h3>Coming soon</h3>
-            <p style="color:var(--color-muted);font-size:.9rem;">ギフトセットを準備中です。</p>
-          </div>
+        <div class="product-hero-info">
+          <span class="badge">数量限定</span>
+          <h3>パレスチナスイーツセット</h3>
+          <p class="product-subtitle">クナーファ 2個 ＋ バクラバ 6個</p>
+          <p>黄金色に焼き上げたクナーファと、層を重ねた香ばしいバクラバ。
+             パレスチナを代表する二つの伝統菓子を、ご家庭でお楽しみいただけるセットにしました。</p>
+          <p class="price-lg">¥—,— <span class="price-note">（税込・送料別）</span></p>
+          <a class="btn btn-gold" href="product.html">詳しく見る</a>
         </div>
       </div>
     </div>
@@ -89,9 +78,9 @@
   <!-- CTA -->
   <section style="text-align:center;">
     <div class="container">
-      <h2 class="section-title">日本では希少な、本場のクナーファを。</h2>
+      <h2 class="section-title">日本では希少な、本場のパレスチナスイーツを。</h2>
       <p class="section-lead">解凍してそのまま、または温めて。お召し上がり方ガイド付きでお届けします。</p>
-      <a class="btn btn-primary" href="product-kunafa.html">商品ページへ</a>
+      <a class="btn btn-primary" href="product.html">商品ページへ</a>
     </div>
   </section>
 
@@ -106,8 +95,7 @@
         <div>
           <h3 style="font-size:1rem;color:#fff;">メニュー</h3>
           <p><a href="#story">Bisanについて</a></p>
-          <p><a href="#products">商品一覧</a></p>
-          <p><a href="product-kunafa.html">クナーファ</a></p>
+          <p><a href="#product">商品</a></p>
         </div>
         <div>
           <h3 style="font-size:1rem;color:#fff;">店舗・SNS</h3>
