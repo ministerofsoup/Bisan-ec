@@ -125,7 +125,7 @@ img { max-width: 100%; display: block; }
    グラデーション」の順。画像未配置の間はフォールバックが表示されます。
    別ファイル名にする場合は下の --hero-image を変更してください。 */
 .hero {
-  --hero-image: url("../img/hero.jpg");
+  --hero-image: url("../img/header.png");
   position: relative;
   color: #fff;
   text-align: center;
@@ -199,7 +199,8 @@ section { padding: 72px 0; }
 .story .visual {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #2b6b3e, #1E5631);
+  background: url("../img/table_create.png") center/cover no-repeat,
+              linear-gradient(135deg, #2b6b3e, #1E5631);
   box-shadow: var(--shadow);
 }
 .story h2 { color: var(--color-primary); }
